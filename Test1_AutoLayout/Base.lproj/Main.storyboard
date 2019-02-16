@@ -221,9 +221,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VJe-xB-Pmk">
-                                <rect key="frame" x="0.0" y="64" width="1024" height="643.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VJe-xB-Pmk">
+                                <rect key="frame" x="0.0" y="70" width="1024" height="638"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailTableViewCell" rowHeight="77" id="DWw-cO-CFD" customClass="DetailCell" customModule="Test1_AutoLayout" customModuleProvider="target">
@@ -393,7 +392,11 @@
                         <constraints>
                             <constraint firstItem="tUy-RZ-fQZ" firstAttribute="bottom" secondItem="DTf-bq-ALw" secondAttribute="bottom" id="D10-Uk-1el"/>
                             <constraint firstItem="DTf-bq-ALw" firstAttribute="leading" secondItem="tUy-RZ-fQZ" secondAttribute="leading" id="PsP-iM-ukj"/>
+                            <constraint firstItem="tUy-RZ-fQZ" firstAttribute="top" secondItem="VJe-xB-Pmk" secondAttribute="top" id="T96-oO-zMx"/>
+                            <constraint firstItem="tUy-RZ-fQZ" firstAttribute="trailing" secondItem="VJe-xB-Pmk" secondAttribute="trailing" id="avP-aN-Waz"/>
                             <constraint firstItem="tUy-RZ-fQZ" firstAttribute="trailing" secondItem="DTf-bq-ALw" secondAttribute="trailing" id="epJ-N0-vm4"/>
+                            <constraint firstItem="DTf-bq-ALw" firstAttribute="top" secondItem="VJe-xB-Pmk" secondAttribute="bottom" id="haX-Gk-rG7"/>
+                            <constraint firstItem="VJe-xB-Pmk" firstAttribute="leading" secondItem="tUy-RZ-fQZ" secondAttribute="leading" id="rYM-hG-Cvy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tUy-RZ-fQZ"/>
                     </view>
@@ -413,9 +416,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="web-MK-hR1" customClass="DesignableSegmentedControl" customModule="Test1_AutoLayout" customModuleProvider="target">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="web-MK-hR1" customClass="DesignableSegmentedControl" customModule="Test1_AutoLayout" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="708" width="1024" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ymJ-4n-mkA"/>
+                                </constraints>
                                 <segments>
                                     <segment title="Text 1"/>
                                     <segment title="Text 2"/>
@@ -433,22 +438,25 @@
                                     <action selector="didPressWithSegmentControl:" destination="Mxt-pi-RVt" eventType="valueChanged" id="pmU-ee-3io"/>
                                 </connections>
                             </segmentedControl>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JD1-QW-3g3">
-                                <rect key="frame" x="0.0" y="64" width="1024" height="644"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JD1-QW-3g3">
+                                <rect key="frame" x="0.0" y="70" width="1024" height="638"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fQx-CD-rB8">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQx-CD-rB8">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="644"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="testmiko" translatesAutoresizingMaskIntoConstraints="NO" id="fJ9-4s-TWj">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testmiko" translatesAutoresizingMaskIntoConstraints="NO" id="fJ9-4s-TWj">
                                                 <rect key="frame" x="362" y="20" width="300" height="300"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="300" id="Ter-Bj-HXy"/>
+                                                    <constraint firstAttribute="height" constant="300" id="Vsn-dh-InP"/>
+                                                </constraints>
                                             </imageView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="Lorem ipsum " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="S6j-5g-RFS" customClass="DesignableTextView" customModule="Test1_AutoLayout" customModuleProvider="target">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" scrollEnabled="NO" editable="NO" text="Lorem ipsum " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="S6j-5g-RFS" customClass="DesignableTextView" customModule="Test1_AutoLayout" customModuleProvider="target">
                                                 <rect key="frame" x="169" y="328" width="685" height="292"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="292" id="pfm-Jr-igt"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 <userDefinedRuntimeAttributes>
@@ -465,11 +473,35 @@
                                             </textView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="S6j-5g-RFS" secondAttribute="bottom" constant="24" id="4sl-UX-w1T"/>
+                                            <constraint firstItem="S6j-5g-RFS" firstAttribute="top" secondItem="fJ9-4s-TWj" secondAttribute="bottom" constant="8" id="6sH-mw-Dap"/>
+                                            <constraint firstAttribute="trailing" secondItem="S6j-5g-RFS" secondAttribute="trailing" constant="170" id="HJZ-55-uVM"/>
+                                            <constraint firstItem="fJ9-4s-TWj" firstAttribute="top" secondItem="fQx-CD-rB8" secondAttribute="top" constant="20" id="MEn-og-Nip"/>
+                                            <constraint firstItem="fJ9-4s-TWj" firstAttribute="centerX" secondItem="fQx-CD-rB8" secondAttribute="centerX" id="QsW-ao-4JB"/>
+                                            <constraint firstAttribute="width" constant="1024" id="a39-8m-IDO"/>
+                                            <constraint firstItem="S6j-5g-RFS" firstAttribute="leading" secondItem="fQx-CD-rB8" secondAttribute="leading" constant="169" id="mgB-lN-DfC"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="fQx-CD-rB8" firstAttribute="leading" secondItem="JD1-QW-3g3" secondAttribute="leading" id="FgV-Xq-KdM"/>
+                                    <constraint firstAttribute="trailing" secondItem="fQx-CD-rB8" secondAttribute="trailing" id="Yzb-6s-4Gz"/>
+                                    <constraint firstAttribute="bottom" secondItem="fQx-CD-rB8" secondAttribute="bottom" id="aFi-LE-Eoc"/>
+                                    <constraint firstItem="fQx-CD-rB8" firstAttribute="top" secondItem="JD1-QW-3g3" secondAttribute="top" id="mo7-k6-xrF"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="web-MK-hR1" firstAttribute="top" secondItem="JD1-QW-3g3" secondAttribute="bottom" id="11C-86-oaz"/>
+                            <constraint firstItem="mtz-hO-GCS" firstAttribute="top" secondItem="JD1-QW-3g3" secondAttribute="top" id="dwM-RH-bv5"/>
+                            <constraint firstItem="web-MK-hR1" firstAttribute="leading" secondItem="mtz-hO-GCS" secondAttribute="leading" id="eSW-hh-Kgr"/>
+                            <constraint firstItem="mtz-hO-GCS" firstAttribute="trailing" secondItem="web-MK-hR1" secondAttribute="trailing" id="fzC-lv-BWl"/>
+                            <constraint firstItem="mtz-hO-GCS" firstAttribute="bottom" secondItem="web-MK-hR1" secondAttribute="bottom" id="g18-kq-tfF"/>
+                            <constraint firstItem="mtz-hO-GCS" firstAttribute="trailing" secondItem="JD1-QW-3g3" secondAttribute="trailing" id="gjV-db-SmM"/>
+                            <constraint firstItem="JD1-QW-3g3" firstAttribute="leading" secondItem="mtz-hO-GCS" secondAttribute="leading" id="pGO-qL-nGC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="mtz-hO-GCS"/>
                     </view>
                     <connections>
