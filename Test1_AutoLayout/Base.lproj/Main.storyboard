@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aQ5-5y-9RJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aQ5-5y-9RJ">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,7 +15,7 @@
             <objects>
                 <navigationController id="aQ5-5y-9RJ" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NKD-54-oOs">
-                        <rect key="frame" x="0.0" y="20" width="1024" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="1024" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -85,26 +85,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z3E-Fo-MS3" customClass="DesignableView" customModule="Test1_AutoLayout" customModuleProvider="target">
-                                <rect key="frame" x="287" y="325" width="450" height="118"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z3E-Fo-MS3" customClass="DesignableView" customModule="Test1_AutoLayout" customModuleProvider="target">
+                                <rect key="frame" x="287" y="360" width="450" height="118"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GeF-fe-hZY" customClass="DesignableLabel" customModule="Test1_AutoLayout" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="8" width="411" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="1000" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GeF-fe-hZY" customClass="DesignableLabel" customModule="Test1_AutoLayout" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="8" width="410" height="39"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hmo-jq-8to">
-                                        <rect key="frame" x="0.0" y="48" width="450" height="1"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hmo-jq-8to">
+                                        <rect key="frame" x="0.0" y="47" width="450" height="1"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="LqM-w6-40q"/>
+                                        </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUs-ov-gBO" customClass="DesignableButton" customModule="Test1_AutoLayout" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUs-ov-gBO" customClass="DesignableButton" customModule="Test1_AutoLayout" customModuleProvider="target">
                                         <rect key="frame" x="243" y="68" width="120" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.50196078430000002" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="pZi-7y-27j"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="stA-me-QqY"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                         <state key="normal" title="OK">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -115,9 +118,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgD-YA-D2O" customClass="DesignableButton" customModule="Test1_AutoLayout" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgD-YA-D2O" customClass="DesignableButton" customModule="Test1_AutoLayout" customModuleProvider="target">
                                         <rect key="frame" x="87" y="68" width="120" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.96078431369999995" green="0.65098039220000004" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                         <state key="normal" title="Cancel">
@@ -131,6 +133,24 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="HUs-ov-gBO" firstAttribute="top" secondItem="zgD-YA-D2O" secondAttribute="top" id="1BI-bI-IsL"/>
+                                    <constraint firstAttribute="bottom" secondItem="HUs-ov-gBO" secondAttribute="bottom" constant="10" id="1YP-Qd-5QZ"/>
+                                    <constraint firstItem="HUs-ov-gBO" firstAttribute="height" secondItem="zgD-YA-D2O" secondAttribute="height" id="5d8-iq-FqI"/>
+                                    <constraint firstItem="HUs-ov-gBO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zgD-YA-D2O" secondAttribute="trailing" constant="36" id="DtZ-qf-vzB"/>
+                                    <constraint firstAttribute="trailing" secondItem="HUs-ov-gBO" secondAttribute="trailing" constant="87" id="IP3-4V-zGb"/>
+                                    <constraint firstItem="HUs-ov-gBO" firstAttribute="width" secondItem="zgD-YA-D2O" secondAttribute="width" id="LdJ-Kx-KyS"/>
+                                    <constraint firstItem="GeF-fe-hZY" firstAttribute="top" secondItem="Z3E-Fo-MS3" secondAttribute="top" constant="8" id="bak-hG-brq"/>
+                                    <constraint firstAttribute="width" constant="450" id="cPa-F8-DOY"/>
+                                    <constraint firstItem="zgD-YA-D2O" firstAttribute="leading" secondItem="Z3E-Fo-MS3" secondAttribute="leading" constant="87" id="cyv-Tr-ZOc"/>
+                                    <constraint firstItem="Hmo-jq-8to" firstAttribute="top" secondItem="GeF-fe-hZY" secondAttribute="bottom" id="f7d-7G-6tY"/>
+                                    <constraint firstAttribute="trailing" secondItem="GeF-fe-hZY" secondAttribute="trailing" constant="20" id="ffO-wQ-CPp"/>
+                                    <constraint firstItem="Hmo-jq-8to" firstAttribute="leading" secondItem="Z3E-Fo-MS3" secondAttribute="leading" id="lNR-HD-2x0"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="118" id="ly8-rh-ORn"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hmo-jq-8to" secondAttribute="trailing" id="n44-ys-VRL"/>
+                                    <constraint firstItem="HUs-ov-gBO" firstAttribute="top" secondItem="Hmo-jq-8to" secondAttribute="bottom" constant="20" id="qvv-A1-ifo"/>
+                                    <constraint firstItem="GeF-fe-hZY" firstAttribute="leading" secondItem="Z3E-Fo-MS3" secondAttribute="leading" constant="20" id="tYY-kX-pS1"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="1"/>
@@ -152,9 +172,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GRF-2M-mO7" customClass="DesignableSegmentedControl" customModule="Test1_AutoLayout" customModuleProvider="target">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GRF-2M-mO7" customClass="DesignableSegmentedControl" customModule="Test1_AutoLayout" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="708" width="1024" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="w4E-IH-9fN"/>
+                                </constraints>
                                 <segments>
                                     <segment title="One line"/>
                                     <segment title="Two lines"/>
@@ -173,6 +195,13 @@
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Z3E-Fo-MS3" firstAttribute="centerY" secondItem="kij-Ys-b2s" secondAttribute="centerY" id="0cD-fH-UTE"/>
+                            <constraint firstItem="kij-Ys-b2s" firstAttribute="bottom" secondItem="GRF-2M-mO7" secondAttribute="bottom" id="P6y-Vd-HU3"/>
+                            <constraint firstItem="Z3E-Fo-MS3" firstAttribute="centerX" secondItem="kij-Ys-b2s" secondAttribute="centerX" id="fNV-8f-tv2"/>
+                            <constraint firstItem="GRF-2M-mO7" firstAttribute="leading" secondItem="kij-Ys-b2s" secondAttribute="leading" id="qcn-tF-DRy"/>
+                            <constraint firstItem="kij-Ys-b2s" firstAttribute="trailing" secondItem="GRF-2M-mO7" secondAttribute="trailing" id="ySw-2Y-dBq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kij-Ys-b2s"/>
                     </view>
                     <connections>
@@ -413,6 +442,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="testmiko" width="300" height="300"/>
+        <image name="testmiko" width="600" height="600"/>
     </resources>
 </document>
